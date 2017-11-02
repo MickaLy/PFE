@@ -13,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.logging.Logger;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -59,8 +61,10 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.permissions) {
+        if (id == R.id.home) {
             // Handle the camera action
+        } else if (id == R.id.permissions) {
+
         } else if (id == R.id.historique) {
 
         } else if (id == R.id.documents) {
@@ -68,7 +72,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.materiels) {
 
         } else if (id == R.id.contact) {
-
+            System.out.println("test mika");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

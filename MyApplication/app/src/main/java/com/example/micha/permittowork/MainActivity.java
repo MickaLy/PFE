@@ -3,6 +3,8 @@ package com.example.micha.permittowork;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -61,6 +63,9 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        Fragment fragment = null;
+        Class fragmentClass = null;
+
         if (id == R.id.home) {
             // Handle the camera action
         } else if (id == R.id.permissions) {
@@ -68,12 +73,21 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.historique) {
 
         } else if (id == R.id.documents) {
-
+            fragmentClass = Documents.class;
         } else if (id == R.id.materiels) {
 
         } else if (id == R.id.contact) {
-            System.out.println("test mika");
+
         }
+
+        try {
+            fragment = (Documents) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.content_main, fragment).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -12,6 +12,7 @@ public class HistoriqueFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        getActivity().setTitle("Historique");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_historique, container, false);
     }

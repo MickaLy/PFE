@@ -60,8 +60,10 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.permissions) {
+        if (id == R.id.home) {
             // Handle the camera action
+        } else if (id == R.id.permissions) {
+
         } else if (id == R.id.historique) {
 
         } else if (id == R.id.documents) {

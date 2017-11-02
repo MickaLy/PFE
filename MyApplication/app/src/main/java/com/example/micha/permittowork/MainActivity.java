@@ -73,9 +73,22 @@ public class MainActivity extends AppCompatActivity
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
         } else if (id == R.id.permissions) {
+            fragmentClass = PermissionFragment.class;
+            try {
+                fragment = (PermissionFragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         } else if (id == R.id.historique) {
+            fragmentClass = HistoriqueFragment.class;
+            try {
+                fragment = (HistoriqueFragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         } else if (id == R.id.documents) {
             fragmentClass = DocumentsFragment.class;
@@ -84,14 +97,24 @@ public class MainActivity extends AppCompatActivity
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
         } else if (id == R.id.materiels) {
+            fragmentClass = MaterielFragment.class;
+            try {
+                fragment = (MaterielFragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         } else if (id == R.id.contact) {
-
+            fragmentClass = ContactFragment.class;
+            try {
+                fragment = (ContactFragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-
-
-
+        
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_main, fragment).commit();
 

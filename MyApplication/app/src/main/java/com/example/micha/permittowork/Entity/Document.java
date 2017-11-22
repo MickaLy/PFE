@@ -9,11 +9,13 @@ public class Document {
     private static int ID = 0;
     private String name;
     private int size;
-    
-    public Document(String name, int size) {
+    private Type type;
+
+    public Document(String name, int size, Type type) {
         ID++;
         this.name = name;
         this.size = size;
+        this.type = type;
     }
 
     public int getID() {
@@ -34,5 +36,9 @@ public class Document {
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public Type getType() {
+        return type;
     }
 }

@@ -5,9 +5,25 @@ package com.example.micha.permittowork.Entity;
  */
 
 public enum Type {
-    pdf,
-    word,
-    excel,
-    png,
-    jpeg
+
+    PDF(".pdf"),
+    WORD(".doc"),
+    EXCEL(".xls"),
+    JPG(".jpg"),
+    JPEG(".jpeg"),
+    PNG(".png");
+
+    private String type;
+
+    Type(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }

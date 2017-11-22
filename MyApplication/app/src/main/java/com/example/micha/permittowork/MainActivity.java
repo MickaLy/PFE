@@ -12,6 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.micha.permittowork.ContactSection.ContactFragment;
+import com.example.micha.permittowork.DocumentSection.DocumentsFragment;
+import com.example.micha.permittowork.HistoriqueSection.HistoriqueFragment;
+import com.example.micha.permittowork.HomeSection.HomeFragment;
+import com.example.micha.permittowork.MaterialSection.MaterialFragment;
+import com.example.micha.permittowork.PermissionSection.PermissionFragment;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -99,9 +106,9 @@ public class MainActivity extends AppCompatActivity
             }
 
         } else if (id == R.id.materiels) {
-            fragmentClass = MaterielFragment.class;
+            fragmentClass = MaterialFragment.class;
             try {
-                fragment = (MaterielFragment) fragmentClass.newInstance();
+                fragment = (MaterialFragment) fragmentClass.newInstance();
             } catch (Exception e) {
                 e.printStackTrace();
             }

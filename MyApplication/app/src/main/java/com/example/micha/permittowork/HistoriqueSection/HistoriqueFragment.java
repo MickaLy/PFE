@@ -1,4 +1,4 @@
-package com.example.micha.permittowork;
+package com.example.micha.permittowork.HistoriqueSection;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,14 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.micha.permittowork.R;
 
-public class HomeFragment extends Fragment {
+
+public class HistoriqueFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        getActivity().setTitle("Permit To Work");
+        getActivity().setTitle("Historique");
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_historique, container, false);
     }
 }

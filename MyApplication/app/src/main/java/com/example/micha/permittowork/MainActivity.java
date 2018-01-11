@@ -60,8 +60,6 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.permissions) {
             // Handle the camera action
-        } else if (id == R.id.safemap) {
-
         } else if (id == R.id.documents) {
 
         } else if (id == R.id.contact) {

@@ -35,7 +35,7 @@ public class FileAdapter extends ArrayAdapter<FileBean> {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View view = LayoutInflater.from(context).inflate(resources, parent, false);
-        TextView textView = (TextView) view.findViewById(R.id.textFileName);
+        TextView textView = (TextView) view.findViewById(R.id.textView);
         textView.setText(fileList.get(position).getFileName());
 
         return view;

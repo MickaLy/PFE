@@ -20,7 +20,7 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.CellVi
 
     private List<Document> documentList;
 
-    DocumentAdapter(List<Document> documentList) {
+    public DocumentAdapter(List<Document> documentList) {
         this.documentList = documentList;
     }
 

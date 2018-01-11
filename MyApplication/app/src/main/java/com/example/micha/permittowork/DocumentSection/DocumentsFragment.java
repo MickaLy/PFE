@@ -16,6 +16,7 @@ import com.example.micha.permittowork.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 public class DocumentsFragment extends Fragment {
@@ -48,18 +49,13 @@ public class DocumentsFragment extends Fragment {
     }
 
     public void initEntities() {
+        Random random = new Random();
+        int maxRange = random.nextInt(40) + 1;
         documentList = new ArrayList<>();
-        documentList.add(new Document("Document 1", 23, Type.PDF));
+        for (int i = 0; i < maxRange; i++) {
+            documentList.add(new Document("Document " + i, 0, Type.PDF));
+        }
 
-        documentList.add(new Document("Document 2", 11, Type.PDF));
-        documentList.add(new Document("Document 3", 98, Type.PDF));
-        documentList.add(new Document("Document 4", 56, Type.PDF));
-        documentList.add(new Document("Document 5", 77, Type.PDF));
-        documentList.add(new Document("Document 6", 242, Type.PDF));
-        documentList.add(new Document("Document 7", 128, Type.PDF));
-        documentList.add(new Document("Document 8", 34, Type.PDF));
-        documentList.add(new Document("Document 9", 99, Type.PDF));
-        documentList.add(new Document("Document 10", 62, Type.PDF));
     }
 
 }

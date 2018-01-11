@@ -25,7 +25,6 @@ public class DocumentsFragment extends Fragment {
     private List<Document> documentList;
 
     private RecyclerView recyclerView;
-    private DividerItemDecoration itemDecoration;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,8 +40,7 @@ public class DocumentsFragment extends Fragment {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        itemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
-        recyclerView.addItemDecoration(itemDecoration);
+
         recyclerView.setAdapter(new DocumentAdapter(documentList));
 
         // Inflate the layout for this fragment

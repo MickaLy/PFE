@@ -4,9 +4,17 @@
     android:layout_height="match_parent"
     tools:context="com.example.micha.permittowork.DocumentSection.DocumentsFragment">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/document_recyclerView"
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:id="@+id/lv_pdf"
+        android:divider="#efefef"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:dividerHeight="5dp"
+        android:layout_height="wrap_content">
+
+    </ListView>
 
 </FrameLayout>
